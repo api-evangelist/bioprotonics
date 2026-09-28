@@ -1,23 +1,62 @@
 aid: bioprotonics
+
 name: BioProtonics
-description: 'BioProtonics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'BioProtonics develops innovative MRI-based software methods, called Magnetic Resonance Histopathology (MRH), that non‑invasively measure tissue texture at the micro‑level to detect early disease stages. Their technology aims to provide safer, less invasive, more accurate diagnostics, reducing the need for surgical biopsies and enabling earlier therapy decisions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bioprotonics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Medical Imaging
+- Diagnostics
+- AI
+- Healthcare
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/bioprotonics-llms.txt
+- type: Hosts
+  url: hosts/bioprotonics-hosts.yml
+- type: Vendors
+  url: vendors/bioprotonics-vendors.yml
+- type: DomainSecurity
+  url: security/bioprotonics-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.bioprotonics.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: API spec endpoint returns no usable content, likely JavaScript-rendered docs.
+  evidence:
+    - url: https://api.bioprotonics.com/openapi.json
+      status: URLError
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
